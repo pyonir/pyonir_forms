@@ -2,7 +2,7 @@ import dataclasses
 from dataclasses import field
 from pyonir.parser import Parsely
 
-from pyonir.types import PyonirApp, os, PyonirRequest
+from pyonir.pyonir_types import PyonirApp, os, PyonirRequest
 from pyonir.core import PyonirPlugin
 
 

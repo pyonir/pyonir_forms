@@ -1,4 +1,4 @@
-from pyonir.types import PyonirRequest
+from pyonir.pyonir_types import PyonirRequest
 
 
 async def form_handler(request: PyonirRequest):
