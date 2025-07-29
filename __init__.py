@@ -76,12 +76,11 @@ class Forms(PyonirPlugin):
     def __init__(self, app: PyonirApp):
         self.FRONTEND_DIRNAME = 'templates'
         super().__init__(app, __file__)
-        # self.endpoint = '/'
         # Preload application's forms content
         self.app_forms = self.query_files(os.path.join(app.contents_dirpath, 'forms'), app_ctx=app.app_ctx, model_type=Form)
 
         # Prepare demo form
-        demo_form_path = os.path.join(os.path.dirname(__file__), 'contents','forms', 'file_uploader_demo.md')
+        demo_form_path = os.path.join(os.path.dirname(__file__), 'contents','forms', 'subscribe-demo.md')
         demo_form = Parsely(demo_form_path, self.app_ctx).map_to_model(Form)
         setattr(self.app_forms, demo_form.file_name, demo_form)
         # Register Form plugin templates to be accessible from application
