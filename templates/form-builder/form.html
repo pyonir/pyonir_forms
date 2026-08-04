@@ -1,7 +1,9 @@
 {% if page.form %} {% import '/form-builder/_components.html' as components %}
 {% set form_id = 'id="%s"' % page.form.id if page.form.id else '' %}
 {% set form = page.form %}
-
+<style>
+    {% include '/static/css/form-input.css' %}
+</style>
 <div class="form-card">
 
     <!-- Form -->
