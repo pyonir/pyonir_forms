@@ -24,12 +24,7 @@
         {% endfor %} {% endif %}
 
         {% if page.form.button %}
-        <button
-            type="{{page.form.button.type or 'submit'}}"
-            class="form-btn form-btn-primary"
-        >
-            {{page.form.button.text}}
-        </button>
+        {{ components.render_ctrl(page.form.button) }}
         {% endif %}
     </form>
 

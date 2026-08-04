@@ -72,6 +72,7 @@ class Form:
     props: dict = field(default_factory=dict)
     inputs: list[FormCtrl] = field(default_factory=list)
     js: str = ""
+    button: FormCtrl = None
 
 
 def process_value(value: Any, context: dict | None = None) -> Any:
@@ -200,5 +201,8 @@ def form_ctrl(
 
 def form(data: dict) -> Form:
     js = data.pop('js','')
+    button = data.pop('button', {})
+    if button:
+        button = form_ctrl(button)
     prop_ctrl = form_ctrl(data, prop_names=HTML_FORM_ATTRIBUTES)
-    return Form(props=prop_ctrl.props, inputs=prop_ctrl.inputs, js=js)
+    return Form(props=prop_ctrl.props, inputs=prop_ctrl.inputs, button=button, js=js)

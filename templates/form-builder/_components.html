@@ -2,7 +2,12 @@
 {% set form_ctrl = ctrl | form_ctrl() %}
 {% set ctrl_type = form_ctrl.props.type %}
 
-{% if ctrl_type == 'select' %}
+{% if ctrl_type == 'button' %}
+    <div class="form-ctrl-container">
+    <button {{ form_ctrl.input_props }}>{{ form_ctrl.label }}</button>
+    </div>
+
+{% elif ctrl_type == 'select' %}
 
     {% include '/form-builder/select.html' %}
 
