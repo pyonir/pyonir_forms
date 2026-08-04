@@ -1,0 +1,41 @@
+
+:root {
+    --bg-layer: #ffffff;
+    --border-layer-line: #d1d5db;
+    --foreground: #111827;
+    --muted-foreground-1: #9ca3af;
+    --primary-focus: #2563eb;
+}
+/* Container */
+.form-ctrl-container {
+    width: 100%;
+    max-width: 24rem; /* max-w-sm */
+}
+
+/* Space between children */
+.form-ctrl-container > * + * {
+    margin-top: 0.75rem; /* space-y-3 */
+}
+
+/* Base input */
+input:where([type=text]), input:where(:not([type])), input:where([type=email]), input:where([type=url]), input:where([type=password]), input:where([type=number]), input:where([type=date]), input:where([type=datetime-local]), input:where([type=month]), input:where([type=search]), input:where([type=tel]), input:where([type=time]), input:where([type=week]), select:where([multiple]), textarea, select
+{
+    display: block;
+    width: 100%;
+
+    padding: 0.625rem 1rem; /* py-2.5 px-4 */
+
+    border: 1px solid var(--border-layer-line);
+    border-radius: 0.5rem;
+
+    background: var(--bg-layer);
+    color: var(--foreground);
+
+    font-size: 1rem;
+    line-height: 1.5;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
