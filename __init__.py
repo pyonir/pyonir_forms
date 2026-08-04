@@ -13,6 +13,7 @@ class PyonirForms(PyonirPlugin):
 
         # Setup templates
         app.TemplateEnvironment.load_template_path(self.templates_dirpath)
+        app.TemplateEnvironment.add_filter(form_ctrl)
 
     @property
     def templates_dirpath(self) -> str:
