@@ -1,0 +1,39 @@
+{% macro render_ctrl(ctrl) %}
+{% set form_ctrl = ctrl | form_ctrl() %}
+{% set ctrl_type = form_ctrl.props.type %}
+
+{% if ctrl_type == 'select' %}
+
+    {% include '/form-builder/select.html' %}
+
+{% elif ctrl_type == 'switch' %}
+
+    {% include '/form-builder/switch.html' %}
+
+{% elif ctrl_type in ('checkbox','radio') %}
+    {% include '/form-builder/checkbox.html' %}
+
+{% elif ctrl_type == 'files' %}
+
+    {% include '/form-builder/file-upload.html' %}
+
+{% elif ctrl_type == 'textarea' %}
+
+    {% include '/form-builder/textarea.html' %}
+
+{% elif ctrl_type == 'html' %}
+
+    {{ form_ctrl.html | safe }}
+
+{% else %}
+    {% if form_ctrl.inputs %}
+        <div class="form-group">
+    	{% for input in form_ctrl.inputs %}
+            {{ render_ctrl(input) }}
+    	{% endfor %}
+        </div>
+    {% else %}
+        {% include '/form-builder/input.html' %}
+    {% endif %}
+{% endif %}
+{% endmacro %}
