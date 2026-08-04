@@ -2,7 +2,7 @@
     {% if form_ctrl.label %}
   <label class="form-label" for="{{ form_ctrl.props.id }}">{{ form_ctrl.label }}</label>
     {% endif %}
-  <input {{ form_ctrl.inputprops }}>
+  <input {{ form_ctrl.input_props }}>
 </div>
 {% if form_ctrl.props.description %}
   <p class="form-help-text">{{ form_ctrl.props.description }}</p>

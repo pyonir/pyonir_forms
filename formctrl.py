@@ -153,9 +153,6 @@ def form_ctrl(
     if isinstance(data, FormCtrl):
         return data
 
-    if not prop_names:
-        prop_names = set()
-        
     if isinstance(data, str):
         data = {"label": data}
 
@@ -177,7 +174,7 @@ def form_ctrl(
     ]
 
     for key, value in data.items():
-        if key not in prop_names or key in ("label", "html", "description"):
+        if (prop_names and key not in prop_names) or key in ("label", "html", "description"):
             continue
 
         if key in HTML_BOOLEAN_ATTRIBUTES:
