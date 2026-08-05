@@ -1,0 +1,259 @@
+/* ==========================================================================
+   BUTTON VARIANTS
+   ==========================================================================
+   Depends on buttons-base.css
+   ========================================================================== */
+
+/* ==========================================================================
+   Brand Palette
+   ========================================================================== */
+
+:root {
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+
+    --color-secondary: #6b7280;
+    --color-secondary-dark: #4b5563;
+
+    --color-success: #16a34a;
+    --color-success-dark: #15803d;
+
+    --color-danger: #dc2626;
+    --color-danger-dark: #b91c1c;
+
+    --color-warning: #d97706;
+    --color-warning-dark: #b45309;
+
+    --color-info: #0891b2;
+    --color-info-dark: #0e7490;
+
+    --color-light: #ffffff;
+    --color-dark: #111827;
+
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-500: #6b7280;
+}
+
+/* ==========================================================================
+   SOLID
+   ========================================================================== */
+
+.btn-primary{
+    --btn-bg:var(--color-primary);
+    --btn-border:var(--color-primary);
+    --btn-color:#fff;
+
+    --btn-hover-bg:var(--color-primary-dark);
+    --btn-hover-border:var(--color-primary-dark);
+
+    --btn-active-bg:#1e40af;
+}
+
+.btn-secondary{
+    --btn-bg:var(--color-secondary);
+    --btn-border:var(--color-secondary);
+    --btn-color:#fff;
+
+    --btn-hover-bg:var(--color-secondary-dark);
+    --btn-hover-border:var(--color-secondary-dark);
+
+    --btn-active-bg:#374151;
+}
+
+.btn-success{
+    --btn-bg:var(--color-success);
+    --btn-border:var(--color-success);
+    --btn-color:#fff;
+
+    --btn-hover-bg:var(--color-success-dark);
+    --btn-hover-border:var(--color-success-dark);
+}
+
+.btn-danger{
+    --btn-bg:var(--color-danger);
+    --btn-border:var(--color-danger);
+    --btn-color:#fff;
+
+    --btn-hover-bg:var(--color-danger-dark);
+    --btn-hover-border:var(--color-danger-dark);
+}
+
+.btn-warning{
+    --btn-bg:var(--color-warning);
+    --btn-border:var(--color-warning);
+    --btn-color:#fff;
+
+    --btn-hover-bg:var(--color-warning-dark);
+    --btn-hover-border:var(--color-warning-dark);
+}
+
+.btn-info{
+    --btn-bg:var(--color-info);
+    --btn-border:var(--color-info);
+    --btn-color:#fff;
+
+    --btn-hover-bg:var(--color-info-dark);
+    --btn-hover-border:var(--color-info-dark);
+}
+
+.btn-dark{
+    --btn-bg:var(--color-dark);
+    --btn-border:var(--color-dark);
+    --btn-color:#fff;
+
+    --btn-hover-bg:#000;
+    --btn-hover-border:#000;
+}
+
+.btn-light{
+    --btn-bg:#fff;
+    --btn-border:var(--gray-300);
+    --btn-color:#111827;
+
+    --btn-hover-bg:var(--gray-50);
+    --btn-hover-border:var(--gray-500);
+}
+
+/* ==========================================================================
+   OUTLINE
+   ========================================================================== */
+
+.btn-outline-primary{
+    --btn-bg:transparent;
+    --btn-border:var(--color-primary);
+    --btn-color:var(--color-primary);
+
+    --btn-hover-bg:var(--color-primary);
+    --btn-hover-border:var(--color-primary);
+    --btn-hover-color:#fff;
+}
+
+.btn-outline-secondary{
+    --btn-bg:transparent;
+    --btn-border:var(--color-secondary);
+    --btn-color:var(--color-secondary);
+
+    --btn-hover-bg:var(--color-secondary);
+    --btn-hover-border:var(--color-secondary);
+    --btn-hover-color:#fff;
+}
+
+.btn-outline-success{
+    --btn-bg:transparent;
+    --btn-border:var(--color-success);
+    --btn-color:var(--color-success);
+
+    --btn-hover-bg:var(--color-success);
+    --btn-hover-border:var(--color-success);
+    --btn-hover-color:#fff;
+}
+
+.btn-outline-danger{
+    --btn-bg:transparent;
+    --btn-border:var(--color-danger);
+    --btn-color:var(--color-danger);
+
+    --btn-hover-bg:var(--color-danger);
+    --btn-hover-border:var(--color-danger);
+    --btn-hover-color:#fff;
+}
+
+/* ==========================================================================
+   SOFT
+   ========================================================================== */
+
+.btn-soft-primary{
+    --btn-bg:#dbeafe;
+    --btn-border:#dbeafe;
+    --btn-color:#1d4ed8;
+
+    --btn-hover-bg:#bfdbfe;
+    --btn-hover-border:#bfdbfe;
+}
+
+.btn-soft-secondary{
+    --btn-bg:#f3f4f6;
+    --btn-border:#f3f4f6;
+    --btn-color:#374151;
+
+    --btn-hover-bg:#e5e7eb;
+    --btn-hover-border:#e5e7eb;
+}
+
+.btn-soft-success{
+    --btn-bg:#dcfce7;
+    --btn-border:#dcfce7;
+    --btn-color:#15803d;
+
+    --btn-hover-bg:#bbf7d0;
+    --btn-hover-border:#bbf7d0;
+}
+
+.btn-soft-danger{
+    --btn-bg:#fee2e2;
+    --btn-border:#fee2e2;
+    --btn-color:#b91c1c;
+
+    --btn-hover-bg:#fecaca;
+    --btn-hover-border:#fecaca;
+}
+
+/* ==========================================================================
+   GHOST
+   ========================================================================== */
+
+.btn-ghost{
+    --btn-bg:transparent;
+    --btn-border:transparent;
+    --btn-color:#374151;
+
+    --btn-hover-bg:var(--gray-100);
+    --btn-hover-border:transparent;
+}
+
+.btn-ghost-primary{
+    --btn-bg:transparent;
+    --btn-border:transparent;
+    --btn-color:var(--color-primary);
+
+    --btn-hover-bg:#dbeafe;
+    --btn-hover-border:transparent;
+}
+
+.btn-ghost-danger{
+    --btn-bg:transparent;
+    --btn-border:transparent;
+    --btn-color:var(--color-danger);
+
+    --btn-hover-bg:#fee2e2;
+    --btn-hover-border:transparent;
+}
+
+/* ==========================================================================
+   LINK
+   ========================================================================== */
+
+.btn-link{
+    background:none;
+    border:none;
+    padding:0;
+
+    color:var(--color-primary);
+
+    text-decoration:none;
+}
+
+.btn-link:hover{
+    text-decoration:underline;
+}
+
+/* ==========================================================================
+   Hover Color Support
+   ========================================================================== */
+
+.btn:hover{
+    color:var(--btn-hover-color,var(--btn-color));
+}

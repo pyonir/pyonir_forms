@@ -1,0 +1,51 @@
+
+/* ==========================================================================
+   SOCIAL
+   ========================================================================== */
+
+.btn-facebook{
+
+    --btn-bg:#1877f2;
+    --btn-border:#1877f2;
+    --btn-color:#fff;
+
+    --btn-hover-bg:#1668d5;
+    --btn-hover-border:#1668d5;
+}
+
+.btn-google{
+
+    --btn-bg:#fff;
+    --btn-border:#dadce0;
+    --btn-color:#202124;
+
+    --btn-hover-bg:#f8f9fa;
+}
+
+.btn-github{
+
+    --btn-bg:#24292f;
+    --btn-border:#24292f;
+    --btn-color:#fff;
+
+    --btn-hover-bg:#111827;
+}
+
+.btn-x{
+
+    --btn-bg:#000;
+    --btn-border:#000;
+    --btn-color:#fff;
+
+    --btn-hover-bg:#222;
+}
+
+.btn-linkedin{
+
+    --btn-bg:#0a66c2;
+    --btn-border:#0a66c2;
+    --btn-color:#fff;
+
+    --btn-hover-bg:#004182;
+}
+

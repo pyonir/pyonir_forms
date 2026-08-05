@@ -1,0 +1,97 @@
+
+:root {
+    /* Typography */
+    --btn-font-family: inherit;
+    --btn-font-size: 0.875rem;
+    --btn-font-weight: 500;
+    --btn-line-height: 1.5;
+
+    /* Spacing */
+    --btn-padding-y: 0.625rem;
+    --btn-padding-x: 1rem;
+    --btn-gap: .5rem;
+
+    /* Radius */
+    --btn-radius: .5rem;
+    --btn-radius-pill: 9999px;
+
+    /* Colors */
+    --btn-bg: #ffffff;
+    --btn-color: #111827;
+    --btn-border: #d1d5db;
+
+    --btn-hover-bg: #f9fafb;
+    --btn-hover-border: #9ca3af;
+
+    --btn-active-bg: #f3f4f6;
+
+    --btn-focus: #2563eb;
+
+    --btn-disabled-opacity: .5;
+
+    /* Transition */
+    --btn-transition:
+        background-color .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        box-shadow .2s ease,
+        transform .15s ease;
+}
+
+/* ==========================================================================
+   Base Button
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--btn-gap);
+
+    font-family: var(--btn-font-family);
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
+    line-height: var(--btn-line-height);
+
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+
+    color: var(--btn-color);
+    background: var(--btn-bg);
+
+    border: 1px solid var(--btn-border);
+    border-radius: var(--btn-radius);
+
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    text-decoration: none;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition: var(--btn-transition);
+}
+
+.btn:hover:not(:disabled) {
+    background: var(--btn-hover-bg);
+    border-color: var(--btn-hover-border);
+}
+
+.btn:active:not(:disabled) {
+    background: var(--btn-active-bg);
+    transform: translateY(1px);
+}
+
+.btn:focus-visible {
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(37,99,235,.25);
+}
+
+.btn:disabled,
+.btn.disabled {
+    opacity: var(--btn-disabled-opacity);
+    pointer-events: none;
+    cursor: not-allowed;
+}

@@ -1,0 +1,358 @@
+
+/* ==========================================================================
+   Shapes
+   ========================================================================== */
+
+.btn-rounded {
+    border-radius: var(--btn-radius);
+}
+
+.btn-pill {
+    border-radius: var(--btn-radius-pill);
+}
+
+.btn-square {
+    padding: 0;
+
+    aspect-ratio: 1;
+
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.btn-square.btn-xs {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.btn-square.btn-sm {
+    width: 2rem;
+    height: 2rem;
+}
+
+.btn-square.btn-lg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.btn-square.btn-xl {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.btn-circle {
+    border-radius: 9999px;
+}
+
+/* ==========================================================================
+   Icon Buttons
+   ========================================================================== */
+
+.btn-icon {
+    padding-inline: .875rem;
+}
+
+.btn-icon-only {
+    padding: 0;
+
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.btn-icon-only.btn-xs {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.btn-icon-only.btn-sm {
+    width: 2rem;
+    height: 2rem;
+}
+
+.btn-icon-only.btn-lg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.btn-icon-only.btn-xl {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+/* ==========================================================================
+   Button Content
+   ========================================================================== */
+
+.btn-start {
+    margin-right: .5rem;
+}
+
+.btn-end {
+    margin-left: .5rem;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width:640px){
+
+    .btn{
+        width:100%;
+    }
+
+    .btn-inline{
+        width:auto;
+    }
+
+}
+/* ==========================================================================
+   LOADING
+   ========================================================================== */
+
+.btn-loading{
+    position:relative;
+
+    pointer-events:none;
+}
+
+.btn-loading>*{
+    opacity:0;
+}
+
+.btn-loading::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:1rem;
+    height:1rem;
+
+    border-radius:50%;
+
+    border:2px solid currentColor;
+    border-right-color:transparent;
+
+    animation:btn-spin .65s linear infinite;
+}
+
+@keyframes btn-spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+/* ==========================================================================
+   ICON POSITIONS
+   ========================================================================== */
+
+.btn-icon-left svg{
+    order:-1;
+}
+
+.btn-icon-right svg{
+    order:2;
+}
+
+.btn-icon-stack{
+
+    flex-direction:column;
+
+    gap:.35rem;
+
+}
+
+
+/* ==========================================================================
+   GRADIENTS
+   ========================================================================== */
+
+.btn-gradient-blue{
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #2563eb
+        );
+
+    border-color:#2563eb;
+
+    color:#fff;
+}
+
+.btn-gradient-green{
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #15803d
+        );
+
+    border-color:#15803d;
+
+    color:#fff;
+}
+
+.btn-gradient-purple{
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #6d28d9
+        );
+
+    border-color:#6d28d9;
+
+    color:#fff;
+}
+
+.btn-gradient-pink{
+
+    background:
+        linear-gradient(
+            135deg,
+            #ec4899,
+            #be185d
+        );
+
+    border-color:#be185d;
+
+    color:#fff;
+}
+
+
+/* ==========================================================================
+   ELEVATED
+   ========================================================================== */
+
+.btn-elevated{
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.08);
+}
+
+.btn-elevated:hover{
+
+    transform:translateY(-1px);
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.16);
+}
+
+
+/* ==========================================================================
+   GLASS
+   ========================================================================== */
+
+.btn-glass{
+
+    background:
+        rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border:
+        1px solid rgba(255,255,255,.25);
+
+    color:white;
+}
+
+
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+@media (prefers-color-scheme:dark){
+
+    .btn{
+
+        --btn-bg:#1f2937;
+        --btn-border:#374151;
+        --btn-color:#f3f4f6;
+
+        --btn-hover-bg:#374151;
+        --btn-hover-border:#4b5563;
+
+        --btn-active-bg:#4b5563;
+    }
+
+    .btn-light{
+
+        --btn-bg:#374151;
+        --btn-border:#4b5563;
+        --btn-color:#f9fafb;
+
+        --btn-hover-bg:#4b5563;
+    }
+
+    .btn-soft-primary{
+
+        --btn-bg:#1e3a8a;
+        --btn-border:#1e3a8a;
+        --btn-color:#dbeafe;
+    }
+
+    .btn-soft-danger{
+
+        --btn-bg:#7f1d1d;
+        --btn-border:#7f1d1d;
+        --btn-color:#fee2e2;
+    }
+
+    .btn-soft-success{
+
+        --btn-bg:#14532d;
+        --btn-border:#14532d;
+        --btn-color:#dcfce7;
+    }
+
+    .btn-ghost{
+
+        --btn-hover-bg:#374151;
+    }
+
+}
+
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+.btn-grow:hover{
+
+    transform:scale(1.04);
+}
+
+.btn-shrink:active{
+
+    transform:scale(.97);
+}
+
+.btn-float:hover{
+
+    transform:translateY(-2px);
+}
+
+.btn-pulse:hover{
+
+    animation:btn-pulse .8s;
+}
+
+@keyframes btn-pulse{
+
+    0%{
+        box-shadow:0 0 0 0 rgba(37,99,235,.45);
+    }
+
+    100%{
+        box-shadow:0 0 0 14px rgba(37,99,235,0);
+    }
+
+}
