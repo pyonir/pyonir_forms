@@ -41,6 +41,14 @@ class FormCtrl:
     description: str | None = None
 
     @property
+    def is_required(self) -> bool:
+        return self.props.get('required', False)
+
+    @property
+    def is_disabled(self) -> bool:
+        return self.props.get('disabled', False)
+
+    @property
     def input_props(self) -> str:
         """
         Generate HTML attributes for this form control.
@@ -72,7 +80,7 @@ class Form:
     props: dict = field(default_factory=dict)
     inputs: list[FormCtrl] = field(default_factory=list)
     js: str = ""
-    button: FormCtrl = None
+    button: FormCtrl | None = None
 
 
 def process_value(value: Any, context: dict | None = None) -> Any:

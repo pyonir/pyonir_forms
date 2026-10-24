@@ -5,6 +5,8 @@ inputs:-
     label: *Email
     type: email
     placeholder: PabloPycasso@pyonir.dev
+    required: true
+    disabled: true
     -
     label: Subscriptions
     type: checkbox

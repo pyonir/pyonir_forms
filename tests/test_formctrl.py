@@ -1,10 +1,17 @@
 import pytest
+from pyonir import DeserializeFile
+from ..formctrl import FormCtrl, form_ctrl, process_value, form
 
-from ..formctrl import FormCtrl, form_ctrl, process_value
+
 # ----------------------------------------------------------------------
 # form_ctrl
 # ----------------------------------------------------------------------
 
+def test_form_file(mock_demo_form: DeserializeFile):
+    file_form = form(mock_demo_form.data)
+    form_ctrl: FormCtrl = file_form.inputs[0]
+    assert form_ctrl
+    
 def test_string_input_creates_text_control():
     ctrl = form_ctrl("Username")
 
