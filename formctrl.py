@@ -4,7 +4,7 @@ import logging
 import re
 from dataclasses import dataclass, field
 from html import escape
-from typing import Any, Optional
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +36,7 @@ HTML_BOOLEAN_ATTRIBUTES = {
 class FormCtrl:
     label: str
     props: dict[str, Any] = field(default_factory=dict)
-    inputs: list["FormCtrl"] = field(default_factory=list)
+    inputs: list[FormCtrl] = field(default_factory=list)
     html: str = ""
     description: str | None = None
 

@@ -1,5 +1,7 @@
+import os
+
+import pytest
 from pyonir.core.templating import DeserializeFile
-import pytest, os
 
 
 @pytest.fixture(scope="session")

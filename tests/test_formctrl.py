@@ -1,7 +1,7 @@
 import pytest
 from pyonir import DeserializeFile
-from ..formctrl import FormCtrl, form_ctrl, process_value, form
 
+from ..formctrl import FormCtrl, form, form_ctrl, process_value
 
 # ----------------------------------------------------------------------
 # form_ctrl
